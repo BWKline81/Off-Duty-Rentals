@@ -1,10 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/ImageSlider.module.css";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [active, setActive] = useState(true);
+  const [delay, setDelay] = useState(true);
   let imageClass = active ? styles.image : styles.image_off;
+  let backgroundAddonClass = delay
+    ? styles.background_off
+    : styles.background_addon;
+
+  useEffect(() => {
+    setTimeout(() => {
+      setDelay(false);
+    }, 1500); // Wait for 1 second before allowing the image to be active
+  });
+
+  useEffect(() => {}, [currentIndex]);
 
   const Previous = () => {
     setActive(false);
@@ -35,8 +49,8 @@ export default function ImageSlider({ slides }) {
   };
 
   return (
-    <div className={styles.container}>
-      <div className={styles.background_addon}></div>
+    <div className={styles.container} data-aos="fade-up">
+      <div className={backgroundAddonClass}></div>
       <div className={styles.background_addon2}></div>
       <div className={styles.heading_container}>
         <h1 className={styles.heading}>Fun Bounce Houses for Everyone!</h1>
@@ -48,10 +62,13 @@ export default function ImageSlider({ slides }) {
         </h3>
       </div>
       <div className={styles.image_container}>
-        <div className={styles.left_arrow} onClick={Previous}>
+        <div
+          className={`${styles.arrow} ${styles.left_arrow}`}
+          onClick={Previous}
+        >
           ←
         </div>
-        <div className={styles.right_arrow} onClick={Next}>
+        <div className={`${styles.arrow} ${styles.right_arrow}`} onClick={Next}>
           →
         </div>
         <div
@@ -62,7 +79,9 @@ export default function ImageSlider({ slides }) {
           {slides.map((slide, slideIndex) => (
             <div
               key={slideIndex}
-              className={styles.dot}
+              className={`${styles.dot} ${
+                slideIndex === currentIndex ? styles.active : ""
+              }`}
               onClick={() => goToSlide(slideIndex)}
             >
               ⬤

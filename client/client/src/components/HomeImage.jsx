@@ -18,10 +18,7 @@ export default function HomeImage() {
         </div>
         <div className={styles.button_container}>
           <Link to="#" target="_blank" className={styles.button_container_link}>
-            <button className={styles.btn}>
-              {" "}
-              Book Now <i className="fa-solid fa-sun"></i>
-            </button>
+            <button className={styles.btn}> Book Now</button>
           </Link>
         </div>
       </div>

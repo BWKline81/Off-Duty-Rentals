@@ -21,7 +21,7 @@
 .logo {
   height: 90%;
   aspect-ratio: 1/1;
-  background-image: url("../assets/Logo.png");
+  background-image: url("../../public/Logo.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
