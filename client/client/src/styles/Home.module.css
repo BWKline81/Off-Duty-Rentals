@@ -31,3 +31,22 @@
   overflow: hidden;
   z-index: 1;
 }
+
+.buffer {
+  width: 100%;
+  height: 25vh;
+  background-color: #0ad2d3;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.buffer_addon {
+  background-color: #fff10f;
+  position: absolute;
+  top: 50%;
+  left: 3.75%;
+  width: 120%;
+  height: 100vh;
+  transform: rotateZ(-40deg);
+}

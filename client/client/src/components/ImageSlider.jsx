@@ -52,7 +52,11 @@ export default function ImageSlider({ slides }) {
     <div className={styles.container} data-aos="fade-up">
       <div className={backgroundAddonClass}></div>
       <div className={styles.background_addon2}></div>
-      <div className={styles.heading_container}>
+      <div
+        className={styles.heading_container}
+        data-aos="zoom-out"
+        data-aos-delay="500"
+      >
         <h1 className={styles.heading}>Fun Bounce Houses for Everyone!</h1>
         <div className={styles.line}></div>
         <h3 className={styles.subheading}>
@@ -61,32 +65,41 @@ export default function ImageSlider({ slides }) {
           house for a group of friends, we have something for everyone!{" "}
         </h3>
       </div>
-      <div className={styles.image_container}>
-        <div
-          className={`${styles.arrow} ${styles.left_arrow}`}
-          onClick={Previous}
-        >
-          ←
-        </div>
-        <div className={`${styles.arrow} ${styles.right_arrow}`} onClick={Next}>
-          →
-        </div>
-        <div
-          className={imageClass}
-          style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        ></div>
-        <div className={styles.dots_container}>
-          {slides.map((slide, slideIndex) => (
-            <div
-              key={slideIndex}
-              className={`${styles.dot} ${
-                slideIndex === currentIndex ? styles.active : ""
-              }`}
-              onClick={() => goToSlide(slideIndex)}
-            >
-              ⬤
-            </div>
-          ))}
+      <div
+        className={styles.image_container_wrap}
+        data-aos="zoom-in"
+        data-aos-delay="600"
+      >
+        <div className={styles.image_container}>
+          <div
+            className={`${styles.arrow} ${styles.left_arrow}`}
+            onClick={Previous}
+          >
+            ←
+          </div>
+          <div
+            className={`${styles.arrow} ${styles.right_arrow}`}
+            onClick={Next}
+          >
+            →
+          </div>
+          <div
+            className={imageClass}
+            style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
+          ></div>
+          <div className={styles.dots_container}>
+            {slides.map((slide, slideIndex) => (
+              <div
+                key={slideIndex}
+                className={`${styles.dot} ${
+                  slideIndex === currentIndex ? styles.active : ""
+                }`}
+                onClick={() => goToSlide(slideIndex)}
+              >
+                ⬤
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

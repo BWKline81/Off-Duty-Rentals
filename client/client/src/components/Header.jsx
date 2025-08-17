@@ -9,6 +9,12 @@ export default function Header() {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const navigate = useNavigate();
+
+  const navigateTo = (dest) => {
+    navigate(dest);
+  };
+
   return (
     <div className={styles.header} data-aos="fade-down">
       <div
@@ -24,7 +30,10 @@ export default function Header() {
               data-aos="fade-left"
               data-aos-delay="500"
             >
-              <button className={styles.pressable}>
+              <button
+                className={styles.pressable}
+                onClick={() => navigateTo("/")}
+              >
                 <i className="fa-solid fa-house"></i>
                 Home
               </button>
@@ -34,7 +43,10 @@ export default function Header() {
               data-aos="fade-left"
               data-aos-delay="700"
             >
-              <button className={styles.pressable}>
+              <button
+                className={styles.pressable}
+                onClick={() => navigateTo("/rentals")}
+              >
                 <i className="fa-solid fa-truck-moving"></i>
                 Rentals
               </button>
@@ -44,7 +56,10 @@ export default function Header() {
               data-aos="fade-left"
               data-aos-delay="900"
             >
-              <button className={styles.pressable}>
+              <button
+                className={styles.pressable}
+                onClick={() => navigateTo("/about")}
+              >
                 <i className="fa-solid fa-address-card"></i>
                 About
               </button>
@@ -54,7 +69,10 @@ export default function Header() {
               data-aos="fade-left"
               data-aos-delay="1100"
             >
-              <button className={styles.pressable}>
+              <button
+                className={styles.pressable}
+                onClick={() => navigateTo("/contact")}
+              >
                 <i className="fa-solid fa-phone"></i>
                 Contact
               </button>
@@ -64,7 +82,10 @@ export default function Header() {
               data-aos="fade-left"
               data-aos-delay="1300"
             >
-              <button className={styles.pressable}>
+              <button
+                className={styles.pressable}
+                onClick={() => navigateTo("/login")}
+              >
                 <i className="fa-solid fa-circle-user"></i>
                 Login
               </button>

@@ -5,6 +5,7 @@ import HomeImage from "../components/HomeImage";
 import ImageSlider from "../components/ImageSlider";
 import RentalsSection from "../components/RentalsSection";
 import ContactSection from "../components/ContactSection";
+import Footer from "../components/Footer";
 import BH1 from "../assets/BH_Template_Images/bh1.jpg";
 import BH2 from "../assets/BH_Template_Images/bh2.jpg";
 import BH3 from "../assets/BH_Template_Images/bh3.jpg";
@@ -16,6 +17,7 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Off Duty Rentals | Home";
 
     return () => {
@@ -56,6 +58,10 @@ function Home() {
       <ImageSlider slides={imageSlides} />
       <RentalsSection />
       <ContactSection />
+      <div className={styles.buffer}>
+        <div className={styles.buffer_addon}></div>
+      </div>
+      <Footer />
     </div>
   );
 }
