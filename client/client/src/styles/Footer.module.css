@@ -1,14 +1,14 @@
 /* Color Pallette:
-  #f5f5f4 - Off White
+  var(--color-text) - Off White
   #0ad2d3 - Cyan
-  #f990e8 - Pink
-  #FFF01F - Yellow
+  var(--color-primary) - Pink
+  var(--color-tertiary) - Yellow
 */
 
 .container {
   width: 100%;
   height: 50vh;
-  background-color: #f990e8;
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,13 +31,13 @@
 }
 
 .i_link i {
-  color: #f5f5f4;
+  color: var(--color-text);
   font-size: 2.5rem;
   transition: 0.3s ease all;
 }
 
 .i_link i:hover {
-  color: #fff01f;
+  color: var(--color-tertiary);
   cursor: pointer;
   scale: 1.1;
 }
@@ -52,7 +52,7 @@
 }
 
 .text_link {
-  color: #f5f5f4;
+  color: var(--color-text);
   font-size: 1.25rem;
   transition: 0.3s ease all;
   cursor: pointer;
@@ -60,7 +60,7 @@
 }
 
 .text_link:hover {
-  color: #fff01f;
+  color: var(--color-tertiary);
   scale: 1.1;
 }
 
@@ -83,7 +83,7 @@
 }
 
 .copyright_row p {
-  color: #f5f5f4;
+  color: var(--color-text);
   font-size: 1.25rem;
 }
 

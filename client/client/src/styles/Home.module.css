@@ -1,6 +1,6 @@
 /* Color Pallette:
-  #f5f5f4 - Off White
-  #0ad2d3 - Cyan
+  var(--color-text) - Off White
+  var(--color-secondary) - Cyan
   #f990e8 - Pink
   #FFF01F - Yellow
 */
@@ -35,7 +35,7 @@
 .buffer {
   width: 100%;
   height: 25vh;
-  background-color: #0ad2d3;
+  background-color: var(--color-secondary);
   position: relative;
   z-index: 0;
   overflow: hidden;

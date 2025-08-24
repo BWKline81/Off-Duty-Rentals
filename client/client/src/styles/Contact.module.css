@@ -1,9 +1,11 @@
 /* Color Pallette:
-  #f5f5f4 - Off White
-  #0ad2d3 - Cyan
-  #f990e8 - Pink
-  #FFF01F - Yellow
+  var(--color-text) - Off White
+  var(--color-secondary) - Cyan
+  var(--color-primary) - Pink
+  var(--color-tertiary) - Yellow
 */
+
+@import "../utilities/Variables.css";
 
 .container {
   height: 100vh;
@@ -37,7 +39,7 @@
 }
 
 .contact_container {
-  background-color: #0ad2d3;
+  background-color: var(--color-secondary);
 }
 
 .background_addon1 {
@@ -48,7 +50,7 @@
   width: 100%;
   height: 100%;
   transform: rotateZ(100deg);
-  background: #0ad2d3;
+  background: var(--color-secondary);
   z-index: -1;
 }
 
@@ -60,7 +62,7 @@
   width: 100%;
   height: 100%;
   transform: rotateZ(15deg);
-  background: #fff01f;
+  background: var(--color-tertiary);
   z-index: -1;
 }
 
@@ -93,7 +95,7 @@
 .line {
   width: 100%;
   height: 5px;
-  background-color: #f5f5f4;
+  background-color: var(--color-text);
   border-radius: 3px;
   flex-shrink: 0;
 }
@@ -102,7 +104,7 @@
   font-size: 1.2rem;
   text-align: center;
   margin-top: 2.5%;
-  color: #f5f5f4;
+  color: var(--color-text);
   transition: all 0.3s ease;
 }
 
@@ -141,7 +143,7 @@
   align-items: center;
   flex-direction: column;
   text-decoration: none;
-  color: #f5f5f4;
+  color: var(--color-text);
   transition: all 0.3s ease;
   cursor: default;
 }
@@ -159,7 +161,7 @@
 .contact_link i:hover,
 .social_link i:hover {
   transform: scale(1.05);
-  color: #fff01f;
+  color: var(--color-tertiary);
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
@@ -167,7 +169,7 @@
 .contact_link p:hover,
 .social_link p:hover {
   transform: scale(1.05);
-  color: #fff01f;
+  color: var(--color-tertiary);
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   text-decoration: underline;
   cursor: pointer;
@@ -175,7 +177,7 @@
 
 .socials_container {
   margin-top: 15vh;
-  background-color: #f990e8;
+  background-color: var(--color-primary);
 }
 
 .background_addon3 {
@@ -186,7 +188,7 @@
   width: 120%;
   height: 100%;
   transform: rotateZ(5deg);
-  background: #f990e8;
+  background: var(--color-primary);
 }
 
 .background_addon4 {
@@ -197,11 +199,11 @@
   width: 120%;
   height: 100%;
   transform: rotateZ(-55deg);
-  background: #fff01f;
+  background: var(--color-tertiary);
 }
 
 .contact_form_container {
-  background-color: #f990e8;
+  background-color: var(--color-primary);
 }
 
 .background_addon5 {
@@ -211,7 +213,7 @@
   width: 100%;
   height: 100%;
   transform: rotateZ(10deg);
-  background-color: #0ad2d3;
+  background-color: var(--color-secondary);
   z-index: -1;
 }
 
@@ -222,7 +224,7 @@
   width: 100%;
   height: 100%;
   transform: rotateZ(-40deg);
-  background-color: #fff01f;
+  background-color: var(--color-tertiary);
   z-index: -1;
 }
 
@@ -241,7 +243,7 @@ form {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  background-color: #f990e8;
+  background-color: var(--color-primary);
   border-radius: 25px;
   position: relative;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -259,7 +261,7 @@ form {
 }
 
 .label {
-  color: #f5f5f4;
+  color: var(--color-text);
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 5px;
@@ -276,8 +278,8 @@ form {
   width: 100%;
   height: 50%;
   background-color: transparent;
-  border: 2px solid #f5f5f4;
-  color: #f5f5f4;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
   font-size: 1.5rem;
   font-weight: 500;
   outline: none;
@@ -292,8 +294,8 @@ form {
   width: 100%;
   height: 80%;
   background-color: transparent;
-  border: 2px solid #f5f5f4;
-  color: #f5f5f4;
+  border: 2px solid var(--color-text);
+  color: var(--color-text);
   font-size: 1rem;
   outline: none;
   position: absolute;
@@ -309,31 +311,31 @@ form {
 .input_box textarea:focus,
 .input_box textarea:valid {
   border-width: 3px;
-  color: #0ad2d3;
-  border-color: #0ad2d3;
+  color: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 .input_box input:focus + .label,
 .input_box input:valid + .label {
   transform: translate(-15%, -90%) scale(0.88);
-  background-color: #f990e8;
-  color: #0ad2d3;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   z-index: 10;
 }
 
 .input_box textarea:focus + .label,
 .input_box textarea:valid + .label {
   transform: translate(-15%, -140%) scale(0.88);
-  background-color: #f990e8;
-  color: #0ad2d3;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   z-index: 10;
 }
 
 form button {
   width: 30%;
   height: 10%;
-  background-color: #0ad2d3;
-  color: #f5f5f4;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
   font-size: 1.3rem;
   font-weight: 600;
   border: none;
@@ -347,7 +349,7 @@ form button {
 }
 
 form button:hover {
-  background-color: #fff01f;
+  background-color: var(--color-tertiary);
   transform: scale(1.1);
   color: black;
 }
@@ -361,7 +363,7 @@ form button:active {
 .buffer {
   width: 100%;
   height: 25vh;
-  background-color: #0ad2d3;
+  background-color: var(--color-secondary);
   position: relative;
   z-index: 0;
   overflow: hidden;

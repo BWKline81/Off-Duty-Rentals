@@ -5,8 +5,8 @@ import "aos/dist/aos.css";
 import Blue_Vert from "../assets/Blue_Vert.png";
 import Pink_Vert from "../assets/Pink_Vert.png";
 import RentalsSectionRental from "./RentalsSectionRental";
-import template1 from "../assets/BH_Template_Images/bh1.jpg";
-import template2 from "../assets/BH_Template_Images/bh2.jpg";
+import Blue_Slide_Image from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
+import Monster_Image from "../assets/Monster_House/Monster_House_Front_Side.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function RentalsSection() {
@@ -42,8 +42,8 @@ export default function RentalsSection() {
         >
           <RentalsSectionRental
             background={Blue_Vert}
-            image={template1}
-            title="Bounce Hosue 1"
+            image={Blue_Slide_Image}
+            title="Blue Water Slide"
             description="This is a great bounce house for all ages. Perfect for parties and events."
             buttonColor="#f990e8"
           />
@@ -55,8 +55,8 @@ export default function RentalsSection() {
         >
           <RentalsSectionRental
             background={Pink_Vert}
-            image={template2}
-            title="Bounce Hosue 2"
+            image={Monster_Image}
+            title="Monster Bounce House"
             description="This is a great bounce house for all ages. Perfect for parties and events."
             buttonColor="#0ad2d3"
           />

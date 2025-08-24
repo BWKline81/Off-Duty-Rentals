@@ -39,6 +39,13 @@ export default function Contact() {
         text: "Message has been sent!",
         icon: "success",
       });
+    } else {
+      console.log("Error", res);
+      Swal.fire({
+        title: "Error!",
+        text: "Message has not been sent!",
+        icon: "error",
+      });
     }
   };
 

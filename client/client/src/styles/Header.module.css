@@ -1,8 +1,8 @@
 /* Color Pallette:
-  #f5f5f4 - Off White
+  var(--color-text) - Off White
   #0ad2d3 - Cyan
-  #f990e8 - Pink
-  #FFF01F - Yellow
+  var(--color-primary) - Pink
+  var(--color-tertiary) - Yellow
 */
 
 .header {
@@ -12,10 +12,10 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #f990e8;
+  background-color: var(--color-primary);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
   transition: 0.3s ease all;
-  z-index: 1000;
+  z-index: 3;
 }
 
 .logo {
@@ -35,7 +35,7 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  color: #f5f5f4;
+  color: var(--color-text);
   margin-right: 3%;
 }
 
@@ -44,7 +44,7 @@
   list-style-type: none;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #f5f5f4;
+  color: var(--color-text);
   transition: color 0.3s ease;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@
 
 .link {
   text-decoration: none;
-  color: #f5f5f4;
+  color: var(--color-text);
   transition: color 0.3s ease;
 
   height: 80%;
@@ -76,7 +76,7 @@
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.5rem;
-  color: #f5f5f4;
+  color: var(--color-text);
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
   font-weight: bold;
   transition: 0.3s ease all;
@@ -84,17 +84,17 @@
 
 .pressable i {
   font-size: 2rem;
-  color: #f5f5f4;
+  color: var(--color-text);
   transition: color 0.3s ease;
 }
 
 .pressable:hover {
-  color: #fff01f;
+  color: var(--color-tertiary);
   cursor: pointer;
   scale: 1.05;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .pressable:hover i {
-  color: #fff01f;
+  color: var(--color-tertiary);
 }

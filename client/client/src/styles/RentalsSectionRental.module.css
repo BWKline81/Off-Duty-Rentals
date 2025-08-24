@@ -1,3 +1,12 @@
+/* Color Pallette:
+  var(--color-text) - Off White
+  var(--color-secondary) - Cyan
+  var(--color-primary) - Pink
+  var(--color-tertiary) - Yellow
+*/
+
+@import "../utilities/Variables.css";
+
 * {
   transition: all 0.3s ease;
 }
@@ -22,7 +31,7 @@
   aspect-ratio: 16/9;
   border-radius: 10px;
   object-fit: cover;
-  border: 2px solid #f5f5f4;
+  border: 2px solid var(--color-text);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -56,7 +65,7 @@
 .title {
   font-size: 2rem;
   font-weight: bold;
-  color: #f5f5f4;
+  color: var(--color-text);
   text-align: center;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   cursor: default;
@@ -71,8 +80,8 @@
 .btn {
   width: 80%;
   padding: 10px;
-  background-color: #f990e8;
-  color: #f5f5f4;
+  background-color: var(--color-primary);
+  color: var(--color-text);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -83,7 +92,7 @@
 }
 
 .btn:hover {
-  background-color: #fff01f !important;
+  background-color: var(--color-tertiary) !important;
   color: black !important;
 }
 

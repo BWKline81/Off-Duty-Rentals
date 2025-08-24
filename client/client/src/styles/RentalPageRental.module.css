@@ -1,0 +1,101 @@
+.container {
+  width: 20%;
+  aspect-ratio: 9/15;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  flex-direction: column;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.7);
+  border: 2px solid black;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.container:hover .image_container {
+  filter: brightness(1);
+}
+
+.image_container {
+  width: 90%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: black;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid white;
+  filter: brightness(0.9);
+}
+
+.image_container:hover {
+  transform: scale(1.05);
+}
+
+.text_content {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.price {
+  font-size: 1.2rem;
+  color: var(--color-text);
+}
+
+.description {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--color-text);
+  text-align: left !important;
+}
+
+.title:hover,
+.price:hover,
+.description:hover {
+  transform: scale(1.05);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  width: 80%;
+  padding: 10px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: var(--color-tertiary) !important;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(0.95);
+  transform: translateY(10%);
+  background-color: red !important;
+}

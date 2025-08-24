@@ -3,11 +3,14 @@ import Header from "../components/Header";
 import styles from "../styles/About.module.css";
 import Footer from "../components/Footer";
 import Placeholder from "../../public/Placeholder.png";
+import Image from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     document.title = "Off Duty Rentals | About";
     AOS.init({ duration: 1000 });
   });
@@ -38,19 +41,21 @@ export default function About() {
             data-aos-delay="600"
           >
             <p>
-              At Off Duty Rentals, we are dedicated to providing safe, reliable,
-              and high-quality bounce house rentals for events of all sizes.
-              From birthday parties and school functions to corporate events and
-              community gatherings, our goal is to create an enjoyable and
-              worry-free experience for every client. We take pride in
-              maintaining our equipment to the highest standards. Every
-              inflatable is thoroughly cleaned, inspected, and securely set up
-              by our trained team to ensure both safety and satisfaction. With a
-              strong focus on professionalism, punctuality, and customer care,
-              we aim to exceed expectations at every event. When you choose Off
-              Duty Rentals, you can trust that your celebration will be
-              supported by dependable service, attention to detail, and a
-              commitment to excellence.
+              <span className={styles.bold_text}>
+                Welcome to Off Duty Rentals!
+              </span>
+              <br />
+              My name is Max and I am the owner/operator of Off Duty Rentals
+              LLC. I am a full time local Firefighter/Paramedic in Florida. With
+              having 2 children myself, I know how important it is to be able to
+              give them the best party without breaking the bank. My goal is to
+              provide just that-fun at an affordable price. I serve Sumter,
+              Marion, Lake, and Citrus counties. Please feel free to{" "}
+              <Link className={styles.link} to="/contact">
+                contact
+              </Link>{" "}
+              us through call or text at 352-808-5058. You can also reach out to
+              us via our Facebook page or email.
             </p>
           </div>
           <div
@@ -58,7 +63,7 @@ export default function About() {
             data-aos="fade-down-left"
             data-aos-delay="700"
           >
-            <img src={Placeholder} alt="" />
+            <img src={Image} alt="Image of an Off Duty Rental Bounce House." />
           </div>
         </div>
       </div>

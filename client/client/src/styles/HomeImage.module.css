@@ -1,7 +1,7 @@
 /* Color Pallette:
-  #f5f5f4 - Off White
-  #0ad2d3 - Cyan
-  #f990e8 - Pink
+  var(--color-text) - Off White
+  var(--color-secondary) - Cyan
+  var(--color-primary) - Pink
   #FFF01F - Yellow
 */
 
@@ -39,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f5f5f4;
+  color: var(--color-text);
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
   font-size: 2rem;
   font-weight: 700;
@@ -76,8 +76,8 @@
 .btn {
   width: 90%;
   height: 100%;
-  background-color: #f990e8;
-  color: #f5f5f4;
+  background-color: var(--color-primary);
+  color: var(--color-text);
   font-size: 2.2rem;
   font-weight: 600;
   border: none;
@@ -97,7 +97,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #0ad2d3;
+  background-color: var(--color-secondary);
   transform: scaleX(0);
   transition: transform 0.3s ease;
   transform-origin: left;
@@ -122,5 +122,5 @@
   position: absolute;
   top: -7%;
   left: 91%;
-  color: #f990e8;
+  color: var(--color-primary);
 }

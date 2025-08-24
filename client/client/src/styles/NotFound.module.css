@@ -1,15 +1,17 @@
 /* Color Pallette:
-  #f5f5f4 - Off White
-  #0ad2d3 - Cyan
-  #f990e8 - Pink
-  #FFF01F - Yellow
+  var(--color-text) - Off White
+  var(--color-secondary) - Cyan
+  var(--color-primary) - Pink
+  var(--color-tertiary) - Yellow
 */
+
+@import "../utilities/Variables.css";
 
 .container {
   height: 100vh;
   width: 100%;
   margin: 0;
-  background-color: #f990e8;
+  background-color: var(--color-primary);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,7 +20,7 @@
 
 .container i {
   font-size: 10rem;
-  color: #f5f5f4;
+  color: var(--color-text);
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -29,7 +31,7 @@
 
 .container h1 {
   font-size: 5rem;
-  color: #f5f5f4;
+  color: var(--color-text);
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -40,7 +42,7 @@
 
 .container h2 {
   font-size: 1.5rem;
-  color: #f5f5f4;
+  color: var(--color-text);
   text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
 
@@ -52,8 +54,8 @@
 .container button {
   width: 20%;
   padding: 20px;
-  background-color: #0ad2d3;
-  color: #f5f5f4;
+  background-color: var(--color-secondary);
+  color: var(--color-text);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -64,7 +66,7 @@
 }
 
 .container button:hover {
-  background-color: #fff01f !important;
+  background-color: var(--color-tertiary) !important;
   color: black !important;
   transform: scale(1.05);
 }

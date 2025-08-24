@@ -6,12 +6,12 @@ import ImageSlider from "../components/ImageSlider";
 import RentalsSection from "../components/RentalsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import BH1 from "../assets/BH_Template_Images/bh1.jpg";
-import BH2 from "../assets/BH_Template_Images/bh2.jpg";
-import BH3 from "../assets/BH_Template_Images/bh3.jpg";
-import BH4 from "../assets/BH_Template_Images/bh4.jpg";
-import BH5 from "../assets/BH_Template_Images/bh5.jpg";
-import BH6 from "../assets/BH_Template_Images/bh6.jpg";
+import BH1 from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
+import BH2 from "../assets/Blue_Slide/Blue_Slide_Front.jpg";
+import BH5 from "../assets/Blue_Slide/Blue_Slide_Side.jpg";
+import BH4 from "../assets/Monster_House/Monster_House_Slide.jpg";
+import BH3 from "../assets/Monster_House/Monster_House_Inside.jpg";
+import BH6 from "../assets/Monster_House/Monster_House_Outside.jpg";
 
 function Home() {
   const [loading, setLoading] = useState(true);
