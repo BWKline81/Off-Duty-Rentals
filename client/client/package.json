@@ -2,10 +2,11 @@
   "name": "client",
   "private": true,
   "version": "0.0.0",
-  "homepage": "bwkline81.github.io/Off-Duty-Rentals/",
+  "homepage": "https://bwkline81.github.io/Off-Duty-Rentals/",
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "clean": "rimraf build",
     "build": "vite build --outDir build",
     "lint": "eslint .",
     "preview": "vite preview",
