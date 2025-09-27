@@ -90,3 +90,57 @@
 .copyright_row p:hover {
   scale: 1.1;
 }
+
+@media screen and (max-width: 1100px) {
+  .text_link {
+    font-size: 1.05rem;
+  }
+
+  .copyright_row p {
+    font-size: 1.05rem;
+  }
+
+  .nav_row {
+    width: 60%;
+  }
+
+  .other_row {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav_row {
+    width: 80%;
+  }
+
+  .other_row {
+    width: 80%;
+  }
+
+  i_link i {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .nav_row {
+    width: 90%;
+  }
+
+  .other_row {
+    width: 90%;
+  }
+
+  i_link i {
+    font-size: 1.5rem;
+  }
+
+  .copyright_row p {
+    font-size: 0.95rem;
+  }
+
+  .text_link {
+    font-size: 0.95rem;
+  }
+}

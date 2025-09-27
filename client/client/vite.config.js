@@ -13,4 +13,9 @@ export default defineConfig({
       "*.js": "application/javascript",
     },
   },
+  resolve: {
+    alias: {
+      sweetalert2: "node_modules/sweetalert2/dist/sweetalert2.js",
+    },
+  },
 });

@@ -28,7 +28,7 @@
 .content_container {
   width: 100%;
   height: 100vh;
-  margin-top: 15vh;
+  margin-top: 14vh;
   background-color: var(--color-secondary);
   z-index: 0;
   position: relative;
@@ -73,20 +73,10 @@
 .buffer {
   width: 100%;
   height: 25vh;
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   position: relative;
   z-index: 0;
   overflow: hidden;
-}
-
-.buffer_addon {
-  background-color: #fff10f;
-  position: absolute;
-  top: 50%;
-  left: 3.75%;
-  width: 120%;
-  height: 100vh;
-  transform: rotateZ(-40deg);
 }
 
 .contact_form_back {
@@ -260,6 +250,17 @@ form {
   z-index: 1;
 }
 
+.alert {
+  position: absolute;
+  top: -10%;
+  width: 50%;
+  animation: fadeIn 0.5s ease-in-out, fadeOut 0.5s ease-in-out 4.5s;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -275,5 +276,11 @@ form {
   }
   to {
     opacity: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .rentals_container {
+    flex-direction: column;
   }
 }

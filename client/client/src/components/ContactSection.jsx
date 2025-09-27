@@ -3,6 +3,8 @@ import styles from "../styles/ContactSection.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Background from "../assets/ODR Background 3.PNG";
+import SectionBackground from "./SectionBackground";
 
 export default function ContactSection() {
   useEffect(() => {
@@ -13,8 +15,8 @@ export default function ContactSection() {
 
   return (
     <div className={styles.container} data-aos="fade-up">
-      <div className={styles.backgroundaddon1}></div>
-      <div className={styles.backgroundaddon2}></div>
+      <SectionBackground image={Background} />
+
       <div
         className={styles.heading_wrap}
         data-aos="flip-left"

@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Login_Page from "./pages/Login_Page";
 import NotFound from "./pages/NotFound";
+import UnderConstruction from "./pages/UnderConstruction";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/rentals" element={<Rentals />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login_Page />} />
+        <Route path="/login" element={<UnderConstruction />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </HashRouter>

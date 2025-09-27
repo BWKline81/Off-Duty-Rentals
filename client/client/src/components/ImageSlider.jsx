@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/ImageSlider.module.css";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import Background from "../assets/ODR Background 1.PNG";
+import SectionBackground from "./SectionBackground";
 
 export default function ImageSlider({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -50,8 +52,8 @@ export default function ImageSlider({ slides }) {
 
   return (
     <div className={styles.container} data-aos="fade-up">
-      <div className={backgroundAddonClass}></div>
-      <div className={styles.background_addon2}></div>
+      <SectionBackground image={Background} />
+
       <div
         className={styles.heading_container}
         data-aos="zoom-out"

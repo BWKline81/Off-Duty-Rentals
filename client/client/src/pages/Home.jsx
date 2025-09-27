@@ -6,23 +6,25 @@ import ImageSlider from "../components/ImageSlider";
 import RentalsSection from "../components/RentalsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
-import BH1 from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
+import BH6 from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
 import BH2 from "../assets/Blue_Slide/Blue_Slide_Front.jpg";
 import BH5 from "../assets/Blue_Slide/Blue_Slide_Side.jpg";
 import BH4 from "../assets/Monster_House/Monster_House_Slide.jpg";
 import BH3 from "../assets/Monster_House/Monster_House_Inside.jpg";
-import BH6 from "../assets/Monster_House/Monster_House_Outside.jpg";
+import BH1 from "../assets/Monster_House/Monster_House_Outside.jpg";
 
 function Home() {
   const [loading, setLoading] = useState(true);
 
+  console.log("exist");
+
   useEffect(() => {
     window.scrollTo(0, 0);
     document.title = "Off Duty Rentals | Home";
+    console.log(loading);
 
-    return () => {
-      setLoading(false);
-    };
+    setLoading(false);
+    console.log(loading);
   }, []);
 
   const imageSlides = [
@@ -53,14 +55,12 @@ function Home() {
         data-aos-duration="1000"
         data-aos-delay="700"
       >
-        <HomeImage />
+        <HomeImage image={window.innerWidth > 750 ? BH6 : BH5} />
       </div>
       <ImageSlider slides={imageSlides} />
       <RentalsSection />
       <ContactSection />
-      <div className={styles.buffer}>
-        <div className={styles.buffer_addon}></div>
-      </div>
+
       <Footer />
     </div>
   );

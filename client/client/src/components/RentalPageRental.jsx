@@ -11,15 +11,8 @@ export default function Rentals(props) {
     setRentalOpen(true);
   };
 
-  return (
-    <div
-      className={styles.container}
-      style={{ backgroundColor: props.bgColor }}
-    >
-      <div
-        className={styles.image_container}
-        style={{ backgroundImage: `url(${props.image})` }}
-      ></div>
+  let normalSize = (
+    <>
       <div className={styles.text_content}>
         <h2 className={styles.title}>{props.title}</h2>
         <p className={styles.description}>{props.description}</p>
@@ -32,6 +25,37 @@ export default function Rentals(props) {
       >
         More Details
       </button>
+    </>
+  );
+
+  let reducedSize = (
+    <>
+      <div className={styles.text_content}>
+        <h2 className={styles.title}>{props.title}</h2>
+        <p className={styles.description}>{props.description}</p>
+        <p className={styles.price}>Starting at ${props.price}</p>
+
+        <button
+          onClick={handleClick}
+          className={styles.button}
+          style={{ backgroundColor: `${props.btnColor}` }}
+        >
+          More Details
+        </button>
+      </div>
+    </>
+  );
+
+  return (
+    <div
+      className={styles.container}
+      style={{ backgroundColor: props.bgColor }}
+    >
+      <div
+        className={styles.image_container}
+        style={{ backgroundImage: `url(${props.image})` }}
+      ></div>
+      {window.innerWiudth > 700 ? normalSize : reducedSize}
     </div>
   );
 }

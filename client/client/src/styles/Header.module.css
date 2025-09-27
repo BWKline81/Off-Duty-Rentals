@@ -98,3 +98,72 @@
 .pressable:hover i {
   color: var(--color-tertiary);
 }
+
+@media screen and (max-width: 850px) {
+  .logo {
+    height: 80%;
+    margin-left: 5%;
+  }
+
+  .link {
+    height: 70%;
+  }
+
+  .navbar {
+    width: 80%;
+  }
+
+  .pressable {
+    font-size: 1.2rem;
+  }
+
+  .pressable i {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .logo {
+    height: 70%;
+    margin-left: 5%;
+  }
+
+  .link {
+    height: 60%;
+  }
+
+  .navbar {
+    width: 85%;
+  }
+
+  .pressable {
+    font-size: 1rem;
+  }
+
+  .pressable i {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .logo {
+    height: 60%;
+    margin-left: 5%;
+  }
+
+  .link {
+    height: 50%;
+  }
+
+  .navbar {
+    width: 90%;
+  }
+
+  .pressable {
+    font-size: 0.8rem;
+  }
+
+  .pressable i {
+    font-size: 1.2rem;
+  }
+}

@@ -110,3 +110,51 @@
   transform: scale(1.05);
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+@media screen and (max-width: 900px) {
+  .rentals_container {
+    width: 80%;
+    height: 75%;
+    flex-direction: column;
+  }
+
+  .rental_container {
+    width: 60%;
+    aspect-ratio: 15/9;
+  }
+
+  .heading_container {
+    width: 75%;
+    height: 30%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .line {
+    height: 3px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .heading {
+    font-size: 1.25rem;
+  }
+
+  .subheading {
+    font-size: 0.9rem;
+  }
+
+  .line {
+    height: 2px;
+  }
+
+  .rentals_container {
+    height: 90%;
+  }
+}

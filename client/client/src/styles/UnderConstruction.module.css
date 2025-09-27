@@ -1,0 +1,69 @@
+/* Color Pallette:
+  var(--color-text) - Off White
+  var(--color-secondary) - Cyan
+  var(--color-primary) - Pink
+  var(--color-tertiary) - Yellow
+*/
+
+@import "../utilities/Variables.css";
+
+.container {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container i {
+  color: var(--color-text);
+  font-size: 10rem;
+  margin-bottom: 2rem;
+}
+
+.container i:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 10px black;
+}
+
+.container h1,
+h2 {
+  color: var(--color-text);
+  font-size: 2rem;
+  text-align: center;
+  margin: 0 2rem;
+}
+
+.container h1:hover,
+.container h2:hover {
+  transform: scale(1.05);
+  text-shadow: 0 0 10px black;
+}
+
+.button {
+  width: 25%;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--color-tertiary);
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.button:active {
+  transform: scale(0.95), translateY(10%);
+  background-color: red;
+  color: white;
+}

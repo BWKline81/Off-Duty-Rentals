@@ -112,7 +112,7 @@
   justify-content: space-around;
   position: relative;
   list-style-type: none;
-  margin-right: 1.85%;
+  margin-right: 3.21%;
 }
 
 .content_item {
@@ -156,4 +156,56 @@
   scale: 1.05;
   text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
   text-decoration: underline;
+}
+
+@media screen and (max-width: 900px) {
+  .line {
+    width: 65%;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .subheading {
+    font-size: 1rem;
+  }
+
+  .content_item p {
+    font-size: 1.2rem;
+  }
+
+  .content_item i {
+    font-size: 2.5rem;
+  }
+
+  .content_list {
+    margin-right: 6.25%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .line {
+    width: 80%;
+  }
+
+  .heading {
+    font-size: 1.75rem;
+  }
+
+  .subheading {
+    font-size: 0.9rem;
+  }
+
+  .content_item p {
+    font-size: 1rem;
+  }
+
+  .content_item i {
+    font-size: 2.25rem;
+  }
+
+  .content_list {
+    margin-right: 10%;
+  }
 }

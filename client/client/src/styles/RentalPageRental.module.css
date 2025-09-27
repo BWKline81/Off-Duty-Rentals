@@ -99,3 +99,52 @@
   transform: translateY(10%);
   background-color: red !important;
 }
+
+@media screen and (max-width: 1400px) {
+  .title {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 0.9rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    width: 30%;
+    aspect-ratio: 9 / 15;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 70%;
+    height: 35%;
+    flex-direction: row;
+  }
+
+  .image_container {
+    width: 40%;
+    aspect-ratio: 16 / 9;
+  }
+
+  .text_content {
+    width: 40%;
+    height: 90%;
+    justify-content: space-around;
+  }
+
+  .title {
+    width: 100%;
+  }
+
+  .button {
+    width: 60%;
+    font-size: 0.8rem;
+  }
+}

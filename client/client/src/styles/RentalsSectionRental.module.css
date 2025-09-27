@@ -101,3 +101,60 @@
   background-color: red !important;
   transform: translateY(10%);
 }
+
+@media screen and (max-width: 900px) {
+  .container {
+    height: 90%;
+  }
+
+  .image {
+    width: 50%;
+    aspect-ratio: 16/9;
+  }
+
+  .textContainer {
+    height: 50%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    height: 120%;
+  }
+
+  .image {
+    width: 70%;
+    aspect-ratio: 16/9;
+  }
+
+  .textContainer {
+    height: 20%;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px;
+    width: 50%;
+  }
+}

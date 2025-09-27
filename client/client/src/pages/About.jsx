@@ -7,6 +7,9 @@ import Image from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import Background from "../assets/ODR Background 2.PNG";
+
+import SectionBackground from "../components/SectionBackground";
 
 export default function About() {
   useEffect(() => {
@@ -21,8 +24,7 @@ export default function About() {
         <Header />
       </div>
       <div className={styles.content_container} data-aos="fade-up">
-        <div className={styles.background_addon1}></div>
-        <div className={styles.background_addon2}></div>
+        <SectionBackground image={Background} />
         <div
           className={styles.heading_container}
           data-aos="fade-up"

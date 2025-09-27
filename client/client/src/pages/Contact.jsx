@@ -5,7 +5,10 @@ import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Swal from "sweetalert2";
+import Background1 from "../assets/ODR Background 1.PNG";
+import Background2 from "../assets/ODR Background 2.PNG";
+import Background3 from "../assets/ODR Background 3.PNG";
+import SectionBackground from "../components/SectionBackground";
 
 export default function Contact() {
   useEffect(() => {
@@ -34,18 +37,8 @@ export default function Contact() {
 
     if (res.success) {
       console.log("Success", res);
-      Swal.fire({
-        title: "Success!",
-        text: "Message has been sent!",
-        icon: "success",
-      });
     } else {
       console.log("Error", res);
-      Swal.fire({
-        title: "Error!",
-        text: "Message has not been sent!",
-        icon: "error",
-      });
     }
   };
 
@@ -57,8 +50,7 @@ export default function Contact() {
         <Header />
       </div>
       <div className={styles.socials_container} data-aos="fade-up">
-        <div className={styles.background_addon2}></div>
-        <div className={styles.background_addon1}></div>
+        <SectionBackground image={Background1} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -88,8 +80,7 @@ export default function Contact() {
         </div>
       </div>
       <div className={styles.contact_container} data-aos="fade-up">
-        <div className={styles.background_addon3}></div>
-        <div className={styles.background_addon4}></div>
+        <SectionBackground image={Background2} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -127,8 +118,7 @@ export default function Contact() {
         </div>
       </div>
       <div className={styles.contact_form_container} data-aos="fade-up">
-        <div className={styles.background_addon5}></div>
-        <div className={styles.background_addon6}></div>
+        <SectionBackground image={Background3} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -177,9 +167,6 @@ export default function Contact() {
             <button type="submit">Send Message</button>
           </form>
         </div>
-      </div>
-      <div className={styles.buffer}>
-        <div className={styles.buffer_addon}></div>
       </div>
       <Footer />
     </div>

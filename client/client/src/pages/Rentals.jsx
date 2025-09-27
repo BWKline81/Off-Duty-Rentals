@@ -1,5 +1,4 @@
 import React, { useEffect, useState, createContext } from "react";
-import Swal from "sweetalert2";
 import styles from "../styles/Rentals.module.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -18,6 +17,10 @@ import MH3 from "../assets/Monster_House/Monster__House_Main.jpg";
 import MH4 from "../assets/Monster_House/Monster_House_Inside.jpg";
 import MH5 from "../assets/Monster_House/Monster_House_Outside.jpg";
 import MH6 from "../assets/Monster_House/Monster_House_Front.jpg";
+import Alert from "@mui/material/Alert";
+import Background from "../assets/ODR Background 2.PNG";
+import Background2 from "../assets/ODR Background 3.PNG";
+import SectionBackground from "../components/SectionBackground";
 
 export let ActiveRentalContext = createContext();
 export let RentalOpenContext = createContext();
@@ -29,7 +32,7 @@ export default function Rentals() {
       id: 1,
       bgColor: "var(--color-primary)",
       image: BlueSlideImage,
-      name: "Blue Slide",
+      name: "Tidal Wave Slide",
       descriptionShort: "A fun and exciting blue water slide for all ages!",
       descriptionLong:
         "A fun and exciting blue water slide inflatable that stands tall and provides hours of entertainment for kids and adults alike. Perfect for birthday parties, family gatherings, or any outdoor event, this inflatable slide is sure to be a hit. With its vibrant blue color and thrilling slide, it's an excellent addition to any celebration.",
@@ -42,7 +45,7 @@ export default function Rentals() {
       image: MonsterHouseImage,
       name: "Monster House",
       descriptionShort:
-        "A spooky and thrilling monster house inflatable with a slide and basketball hoop!",
+        "A spooky and thrilling inflatable with a slide and basketball hoop!",
       descriptionLong:
         "The Monster House inflatable is a spooky and thrilling addition to any event. Featuring a slide and a basketball hoop, this inflatable provides endless fun for kids and adults alike. The monster-themed design adds an exciting element to birthday parties, Halloween events, or any outdoor gathering. With its vibrant colors and engaging features, the Monster House inflatable is sure to be a crowd-pleaser.",
       price: "XXX.XX",
@@ -100,18 +103,28 @@ export default function Rentals() {
 
     if (res.success) {
       console.log("Success", res);
-      Swal.fire({
-        title: "Success!",
-        text: "Message has been sent!",
-        icon: "success",
-      });
+      event.target.reset();
+      window.alert("Message sent successfully!");
+
+      setFormOpen(false);
+    } else if (
+      (res.message =
+        "Sorry, This message has been marked as spam by our server. Contact support if the issue persist.")
+    ) {
+      console.log("Spam", res);
+      event.target.reset();
+      window.alert(
+        "Your message was marked as spam. If you believe this is an error, please contact us directly at Offdutyrentals@gmail.com"
+      );
+      setFormOpen(false);
     } else {
       console.log("Error", res);
-      Swal.fire({
-        title: "Error!",
-        text: "Message has not been sent! Please try again. If this issue persists, please email us at Offdutyrentals@gmail.com",
-        icon: "error",
-      });
+      event.target.reset();
+      window.alert(
+        "There was an error sending the message. Please try again. If the issue persists, contact us directly at Offdutyrentals@gmail.com"
+      );
+
+      setFormOpen(false);
     }
   };
 
@@ -131,8 +144,7 @@ export default function Rentals() {
                 <Header />
               </div>
               <div className={styles.content_container} data-aos="fade-up">
-                <div className={styles.background_addon}></div>
-                <div className={styles.background_addon2}></div>
+                <SectionBackground image={Background2} />
                 <div
                   className={styles.heading_container}
                   data-aos="fade-down"
@@ -163,9 +175,6 @@ export default function Rentals() {
                   ))}
                 </div>
               </div>
-              <div className={styles.buffer}>
-                <div className={styles.buffer_addon}></div>
-              </div>
               <Footer />
             </div>
           </RentalOpenContext.Provider>
@@ -182,8 +191,7 @@ export default function Rentals() {
                 <Header />
               </div>
               <div className={styles.content_container}>
-                <div className={styles.background_addon}></div>
-                <div className={styles.background_addon2}></div>
+                <SectionBackground image={Background} />
                 <Rental
                   images={imagesList[activeRental - 1]}
                   id={rentalsList[activeRental - 1].id}
