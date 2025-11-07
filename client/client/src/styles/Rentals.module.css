@@ -208,6 +208,7 @@ form {
   transform: translate(-15%, -140%) scale(0.88);
   background-color: var(--color-primary);
   color: var(--color-secondary);
+  opacity: 0.2;
   z-index: 10;
 }
 

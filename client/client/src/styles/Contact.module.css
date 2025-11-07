@@ -343,7 +343,7 @@ form button:active {
 
 @media screen and (max-width: 600px) {
   .contact_link p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .contact_link i {
