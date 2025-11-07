@@ -33,7 +33,7 @@ export default function Rentals(props) {
       <div className={styles.text_content}>
         <h2 className={styles.title}>{props.title}</h2>
         <p className={styles.description}>{props.description}</p>
-        <p className={styles.price}>Starting at ${props.price}</p>
+        <p className={styles.price}>Starting at {props.price}</p>
 
         <button
           onClick={handleClick}

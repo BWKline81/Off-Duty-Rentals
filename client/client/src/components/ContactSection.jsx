@@ -40,7 +40,7 @@ export default function ContactSection() {
               target="_blank"
             >
               <i className="fa-solid fa-envelope"></i>
-              <p>Offdutyrentals@gmail.com</p>
+              <p>Offdutyrentalsfl@gmail.com</p>
             </Link>
           </li>
           <li

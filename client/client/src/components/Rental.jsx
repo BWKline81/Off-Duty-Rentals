@@ -122,7 +122,7 @@ export default function Rental(props) {
           <div className={styles.line}></div>
           <h3 className={styles.subheading}>{props.description}</h3>
         </div>
-        <h2>${props.price}</h2>
+        <h2>Starting at {props.price}</h2>
         <button onClick={handleFormOpen}>Book Now</button>
       </div>
     </div>

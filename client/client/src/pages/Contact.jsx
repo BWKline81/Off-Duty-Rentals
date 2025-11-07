@@ -21,7 +21,7 @@ export default function Contact() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "b13bbbdf-c774-4542-b740-f3e796f770b4");
+    formData.append("access_key", "c3a95fa1-16bb-4a15-9068-c3bf5ac85b7a");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -36,8 +36,25 @@ export default function Contact() {
     }).then((res) => res.json());
 
     if (res.success) {
+      window.alert(
+        "Message sent successfully! We will get back to you as soon as possible."
+      );
+      event.target.reset();
       console.log("Success", res);
+    } else if (
+      (res.message =
+        "Sorry, This message has been marked as spam by our server. Contact support if the issue persist.")
+    ) {
+      console.log("Spam", res);
+      event.target.reset();
+      window.alert(
+        "Your message was marked as spam. If you believe this is an error, please contact us directly at Offdutyrentals@gmail.com or contact bwkline@icloud.com for support"
+      );
+      setFormOpen(false);
     } else {
+      window.alert(
+        "Message failed to send. Please try again. If this issue persists, please contact bwkline@icloud.com for support"
+      );
       console.log("Error", res);
     }
   };
@@ -50,7 +67,7 @@ export default function Contact() {
         <Header />
       </div>
       <div className={styles.socials_container} data-aos="fade-up">
-        <SectionBackground image={Background1} />
+        <SectionBackground image={Background2} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -80,7 +97,7 @@ export default function Contact() {
         </div>
       </div>
       <div className={styles.contact_container} data-aos="fade-up">
-        <SectionBackground image={Background2} />
+        <SectionBackground image={Background3} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -96,7 +113,7 @@ export default function Contact() {
         <div className={styles.contact_content_container}>
           <div className={styles.contact_content}>
             <Link
-              to="mailto:Offdutyrentals@gmail.com"
+              to="mailto:Offdutyrentalsfl@gmail.com"
               target="_blank"
               className={styles.contact_link}
             >
@@ -118,7 +135,7 @@ export default function Contact() {
         </div>
       </div>
       <div className={styles.contact_form_container} data-aos="fade-up">
-        <SectionBackground image={Background3} />
+        <SectionBackground image={Background1} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"

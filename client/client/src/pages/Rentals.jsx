@@ -11,6 +11,9 @@ import MonsterHouseImage from "../assets/Monster_House/Monster_House_Front_Side.
 import BS1 from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
 import BS2 from "../assets/Blue_Slide/Blue_Slide_Front.jpg";
 import BS3 from "../assets/Blue_Slide/Blue_Slide_Side.jpg";
+import BS4 from "../assets/Blue_Slide/Blue_Slide_Front_kid.jpg";
+import BS5 from "../assets/Blue_Slide/Blue_Slide_kid.jpg";
+import BS6 from "../assets/Blue_Slide/Blue_Slide_Side_2.jpg";
 import MH1 from "../assets/Monster_House/Monster_House_Front_Side.jpg";
 import MH2 from "../assets/Monster_House/Monster_House_Slide.jpg";
 import MH3 from "../assets/Monster_House/Monster__House_Main.jpg";
@@ -36,7 +39,7 @@ export default function Rentals() {
       descriptionShort: "A fun and exciting blue water slide for all ages!",
       descriptionLong:
         "A fun and exciting blue water slide inflatable that stands tall and provides hours of entertainment for kids and adults alike. Perfect for birthday parties, family gatherings, or any outdoor event, this inflatable slide is sure to be a hit. With its vibrant blue color and thrilling slide, it's an excellent addition to any celebration.",
-      price: "XXX.XX",
+      price: "$150 for one day, $250 for the weekend.",
       btnColor: "var(--color-secondary)",
     },
     {
@@ -48,7 +51,7 @@ export default function Rentals() {
         "A spooky and thrilling inflatable with a slide and basketball hoop!",
       descriptionLong:
         "The Monster House inflatable is a spooky and thrilling addition to any event. Featuring a slide and a basketball hoop, this inflatable provides endless fun for kids and adults alike. The monster-themed design adds an exciting element to birthday parties, Halloween events, or any outdoor gathering. With its vibrant colors and engaging features, the Monster House inflatable is sure to be a crowd-pleaser.",
-      price: "XXX.XX",
+      price: "$150 for one day, $250 for the weekend.",
       btnColor: "var(--color-primary)",
     },
   ];
@@ -58,6 +61,9 @@ export default function Rentals() {
       { url: BS1, title: "Image 1" },
       { url: BS2, title: "Image 2" },
       { url: BS3, title: "Image 3" },
+      { url: BS4, title: "Image 4" },
+      { url: BS5, title: "Image 5" },
+      { url: BS6, title: "Image 6" },
     ],
     [
       { url: MH1, title: "Image 1" },
@@ -87,7 +93,7 @@ export default function Rentals() {
     event.preventDefault();
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "b13bbbdf-c774-4542-b740-f3e796f770b4");
+    formData.append("access_key", "c3a95fa1-16bb-4a15-9068-c3bf5ac85b7a");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -103,8 +109,10 @@ export default function Rentals() {
 
     if (res.success) {
       console.log("Success", res);
+      window.alert(
+        "Message sent successfully! We will get back to you as soon as possible."
+      );
       event.target.reset();
-      window.alert("Message sent successfully!");
 
       setFormOpen(false);
     } else if (
@@ -114,14 +122,14 @@ export default function Rentals() {
       console.log("Spam", res);
       event.target.reset();
       window.alert(
-        "Your message was marked as spam. If you believe this is an error, please contact us directly at Offdutyrentals@gmail.com"
+        "Your message was marked as spam. If you believe this is an error, please contact us directly at Offdutyrentals@gmail.com or contact bwkline@icloud.com for support"
       );
       setFormOpen(false);
     } else {
       console.log("Error", res);
       event.target.reset();
       window.alert(
-        "There was an error sending the message. Please try again. If the issue persists, contact us directly at Offdutyrentals@gmail.com"
+        "There was an error sending the message. Please try again. If the issue persists, contact bwkline@icloud.com for support"
       );
 
       setFormOpen(false);

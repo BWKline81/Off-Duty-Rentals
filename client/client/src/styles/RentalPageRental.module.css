@@ -148,3 +148,29 @@
     font-size: 0.8rem;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+  }
+
+  .text_content {
+    width: 50%;
+  }
+
+  .button {
+    width: 70%;
+  }
+
+  .image_container {
+    width: 35%;
+  }
+
+  .title {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 0.7rem;
+  }
+}
