@@ -283,4 +283,18 @@ form {
   .rentals_container {
     flex-direction: column;
   }
+
+  .contact_form_wrap {
+    width: 90%;
+    height: 80%;
+  }
+
+  .label {
+    font-size: 1rem;
+  }
+
+  .form_buttons button {
+    font-size: 1rem;
+    width: 45%;
+  }
 }

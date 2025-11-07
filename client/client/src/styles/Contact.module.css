@@ -343,11 +343,11 @@ form button:active {
 
 @media screen and (max-width: 600px) {
   .contact_link p {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .contact_link i {
-    font-size: 2.5rem;
+    font-size: 2.25rem;
   }
 
   form button {
