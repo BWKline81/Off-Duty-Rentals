@@ -7,7 +7,7 @@ import RentalsSection from "../components/RentalsSection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
 import BH6 from "../assets/Blue_Slide/Blue_Slide_Main.jpg";
-import BH2 from "../assets/Blue_Slide/Blue_Slide_Front.jpg";
+import BH2 from "../assets/Blue_Slide/Blue_Slide_Front_kid.jpg";
 import BH5 from "../assets/Blue_Slide/Blue_Slide_Side.jpg";
 import BH4 from "../assets/Monster_House/Monster_House_Slide.jpg";
 import BH3 from "../assets/Monster_House/Monster_House_Inside.jpg";

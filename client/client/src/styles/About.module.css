@@ -151,4 +151,8 @@
   .text_container {
     font-size: 1rem;
   }
+
+  .text_container p {
+    font-size: 0.8rem;
+  }
 }

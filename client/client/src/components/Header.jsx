@@ -81,15 +81,7 @@ export default function Header() {
               className={styles.link}
               data-aos="fade-left"
               data-aos-delay="1300"
-            >
-              <button
-                className={styles.pressable}
-                onClick={() => navigateTo("/login")}
-              >
-                <i className="fa-solid fa-circle-user"></i>
-                Login
-              </button>
-            </li>
+            ></li>
           </ul>
         </nav>
       </div>

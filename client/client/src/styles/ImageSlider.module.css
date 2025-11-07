@@ -277,8 +277,9 @@
   }
 
   .arrow {
-    font-size: 2rem;
+    font-size: 1.25rem;
     width: 12%;
+    aspect-ratio: 1 / 1;
   }
 
   .dot {

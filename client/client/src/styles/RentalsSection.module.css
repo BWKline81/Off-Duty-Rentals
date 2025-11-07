@@ -143,11 +143,11 @@
 
 @media screen and (max-width: 600px) {
   .heading {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .subheading {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
   .line {
