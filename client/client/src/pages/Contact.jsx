@@ -67,7 +67,7 @@ export default function Contact() {
         <Header />
       </div>
       <div className={styles.socials_container} data-aos="fade-up">
-        <SectionBackground image={Background2} />
+        <SectionBackground image={2} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -97,7 +97,7 @@ export default function Contact() {
         </div>
       </div>
       <div className={styles.contact_container} data-aos="fade-up">
-        <SectionBackground image={Background3} />
+        <SectionBackground image={3} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"
@@ -135,7 +135,7 @@ export default function Contact() {
         </div>
       </div>
       <div className={styles.contact_form_container} data-aos="fade-up">
-        <SectionBackground image={Background1} />
+        <SectionBackground image={1} />
         <div
           className={styles.heading_container}
           data-aos="fade-down"

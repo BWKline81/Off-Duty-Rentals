@@ -166,4 +166,8 @@
   .pressable i {
     font-size: 1.2rem;
   }
+
+  .nav_links {
+    margin-right: 2.5%;
+  }
 }

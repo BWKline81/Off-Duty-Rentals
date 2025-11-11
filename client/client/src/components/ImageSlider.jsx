@@ -52,7 +52,7 @@ export default function ImageSlider({ slides }) {
 
   return (
     <div className={styles.container} data-aos="fade-up">
-      <SectionBackground image={Background} />
+      <SectionBackground image={1} />
 
       <div
         className={styles.heading_container}

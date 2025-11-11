@@ -24,7 +24,8 @@ export default function About() {
         <Header />
       </div>
       <div className={styles.content_container} data-aos="fade-up">
-        <SectionBackground image={Background} />
+        <SectionBackground image={3} />
+
         <div
           className={styles.heading_container}
           data-aos="fade-up"

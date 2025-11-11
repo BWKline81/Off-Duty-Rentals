@@ -152,7 +152,7 @@ export default function Rentals() {
                 <Header />
               </div>
               <div className={styles.content_container} data-aos="fade-up">
-                <SectionBackground image={Background2} />
+                <SectionBackground image={2} />
                 <div
                   className={styles.heading_container}
                   data-aos="fade-down"
@@ -199,7 +199,7 @@ export default function Rentals() {
                 <Header />
               </div>
               <div className={styles.content_container}>
-                <SectionBackground image={Background} />
+                <SectionBackground image={3} />
                 <Rental
                   images={imagesList[activeRental - 1]}
                   id={rentalsList[activeRental - 1].id}

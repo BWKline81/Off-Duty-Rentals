@@ -25,7 +25,7 @@ export default function RentalsSection() {
 
   return (
     <div className={styles.container} data-aos="fade-up">
-      <SectionBackground image={Background} />
+      <SectionBackground image={2} />
 
       <div
         className={styles.heading_container}
